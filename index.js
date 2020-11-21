@@ -22,7 +22,7 @@ const start = (aruga = new Client()) => {
 	const groups = await aruga.getAllGroups()
 	// kondisi ketika batas group bot telah tercapai,ubah di file settings/setting.json
 	if (groups.length > groupLimit) {
-	await aruga.sendText(chat.id, `Mohon maaf mas,Grup limit full\nMax Group is: ${groupLimit}`).then(() => {
+	await aruga.sendText(chat.id, `Mohon maaf mas,Grup limit full #mhywBOT\nMax Group is: ${groupLimit}`).then(() => {
 	      aruga.leaveGroup(chat.id)
 	      aruga.deleteChat(chat.id)
 	  }) 
@@ -46,7 +46,7 @@ const start = (aruga = new Client()) => {
         const host = await aruga.getHostNumber() + '@c.us'
         // kondisi ketika seseorang diinvite/join group lewat link
         if (event.action === 'add' && event.who !== host) {
-            await aruga.sendTextWithMentions(event.chat, `Hai , Selamat datang di grup ini @${event.who.replace('@c.us', '')} \n\nSemoga betah ya✨`)
+            await aruga.sendTextWithMentions(event.chat, `Hai , Selamat datang di grup ini @${event.who.replace('@c.us', '')} \n\nSemoga betah ya✨#mhywBOT`)
         }
         // kondisi ketika seseorang dikick/keluar dari group
         if (event.action === 'remove' && event.who !== host) {
