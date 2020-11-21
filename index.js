@@ -50,7 +50,7 @@ const start = (aruga = new Client()) => {
         }
         // kondisi ketika seseorang dikick/keluar dari group
         if (event.action === 'remove' && event.who !== host) {
-            await aruga.sendTextWithMentions(event.chat, `Byeee @${event.who.replace('@c.us', '')}, Semoga tenang di alam sana 👋`)
+            await aruga.sendTextWithMentions(event.chat, `Byeee @${event.who.replace('@c.us', '')}, Semoga tenang di alam sana 👋 #mhywBOT`)
         }
     })
 
